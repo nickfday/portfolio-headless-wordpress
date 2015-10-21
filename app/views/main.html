@@ -11,7 +11,7 @@
   </li>
 
   <slick dots=true infinite=false speed=300 arrows=true slides-to-show=6 touch-move=false slides-to-scroll=1 init-onload="true" data="projects">
-    <div ng-repeat="project in projects | orderBy:'parent.date':true" ng-click='test(project)'>
+    <div ng-repeat="project in projects | orderBy:'parent.date':true" ng-click='test(project)' ng-class="{sel: $index == selected}">
       <img data-lazy="{{project.source}}">
       <div class="slide__caption">{{project.parent.title}}</div>
     </div>
@@ -24,8 +24,9 @@
         <h3 class="title">{{selectedTest.parent.title}}</h3>
         <div ng-bind-html="selectedTest.parent.content"></div>
       </div>
-      <!--        <button ng-click="previous()">Prev</button>-->
-      <!--        <button ng-click="next()">Next</button>-->
+      <!--<i class="fa fa-desktop">{{selectedTest.parent.url}}</i>-->
+              <button ng-click="prev()">Prev</button>
+              <button ng-click="next()">Next</button>
     </div>
   </div>
 
