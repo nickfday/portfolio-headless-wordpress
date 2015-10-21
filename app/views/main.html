@@ -1,23 +1,34 @@
 <div class="jumbotron">
   <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
 </div>
 
 <div class="row marketing">
   <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
-
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
-
-  <h4>Karma</h4>
   <p>Spectacular Test Runner for JavaScript.</p>
+  <p>{{fromFactory}}</p>
+  <li ng-repeat="project in projects">
+    {{project.parent.title}}
+  </li>
+
+  <slick dots=true infinite=false speed=300 arrows=true slides-to-show=6 touch-move=false slides-to-scroll=1 init-onload="true" data="projects">
+    <div ng-repeat="project in projects | orderBy:'parent.date':true" ng-click='test(project)'>
+      <img data-lazy="{{project.source}}">
+      <div class="slide__caption">{{project.parent.title}}</div>
+    </div>
+  </slick>
+
+  <div id="single-project">
+    <div class="row project well" ng-show="shown">
+      <button ng-click="close()" id="close" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div ng-show="selectedTest != null" animate-show ng-animate="'fade'">
+        <h3 class="title">{{selectedTest.parent.title}}</h3>
+        <div ng-bind-html="selectedTest.parent.content"></div>
+      </div>
+      <!--        <button ng-click="previous()">Prev</button>-->
+      <!--        <button ng-click="next()">Next</button>-->
+    </div>
+  </div>
+
+
+
 </div>

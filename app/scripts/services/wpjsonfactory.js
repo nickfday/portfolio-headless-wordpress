@@ -8,16 +8,13 @@
  * Factory in the portfolioAppApp.
  */
 angular.module('portfolioAppApp')
-  .factory('wpjsonFactory', function () {
-    // Service logic
-    // ...
-
-    var meaningOfLife = 42;
+  .factory('wpjsonFactory', function ($http) {
 
     // Public API here
     return {
-      someMethod: function () {
-        return meaningOfLife;
-      }
+
+        sayHello: function(text){
+            return "Factory says \"Hello " + text + "\"";
+        }
     };
   });
