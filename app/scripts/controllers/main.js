@@ -16,40 +16,26 @@ angular.module('portfolioAppApp')
     ];
         $scope.fromFactory = wpjsonFactory.sayHello("World");
 
-        $http.get("http://portfolio-remote.dev/wp-json/media?parent?type=projecta")
+        $http.get("http://portfolio-remote.dev/wp-json/pages")
+            .success(function(response) {$scope.welcome = response;});
+
+        $http.get("http://portfolio-remote.dev/wp-json/media?parent?type=project")
         //$http.get("http://portfolio-2015.app/wp-json/media?parent?type=project")
             .success(function(response) {$scope.projects = response;});
 
-        //$scope.test = function (project) {
-        //    $scope.selectedTest = project;
-        //};
-
+        //close button
         $scope.close = function() {
             $scope.shown = false;
         };
-        $scope.next = function() {
-          console.log('NEXT CLICK');
-          $scope.test();
-        };
-        $scope.prev = function() {
-            console.log('PREV CLICK');
-        };
 
-        $scope.select= function(index) {
+        //default first item selected
+        $scope.selected = 0;
+
+
+
+        $scope.select = function(index) {
+            console.log($scope.projects.length);
             $scope.selected = index;
-        };
-
-        $scope.selectedTest = null;
-        $scope.shown = false;
-        $scope.dataLoaded = true;
-
-        $scope.test = function (project) {
-            console.log('TEST CLICK');
-            $scope.selectedTest = project;
-            $scope.shown = true;
-
-            //window.location.href = '/#projects';
-            //var currentSlide = $('.slick-slider').slick('slickCurrentSlide');
         };
 
   });

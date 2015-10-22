@@ -8,10 +8,7 @@
  * Controller of the portfolioAppApp
  */
 angular.module('portfolioAppApp')
-  .controller('AboutCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('AboutCtrl', function ($scope, $http) {
+        $http.get("http://portfolio-remote.dev/wp-json/pages")
+            .success(function(response) {$scope.about = response;});
   });

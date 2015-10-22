@@ -1,35 +1,25 @@
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-</div>
+<h1>Welcome</h1>
 
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
-  <p>{{fromFactory}}</p>
-  <li ng-repeat="project in projects">
-    {{project.parent.title}}
-  </li>
+<div ng-bind-html="welcome[0].content"></div>
+
+<p>{{fromFactory}}</p>
+
+<h1>Projects</h1>
 
   <slick dots=true infinite=false speed=300 arrows=true slides-to-show=6 touch-move=false slides-to-scroll=1 init-onload="true" data="projects">
-    <div ng-repeat="project in projects | orderBy:'parent.date':true" ng-click='test(project)' ng-class="{sel: $index == selected}">
+    <div ng-repeat="project in projects | orderBy:'parent.date':true" ng-click="select($index)" ng-class="{sel: $index == selected}">
       <img data-lazy="{{project.source}}">
-      <div class="slide__caption">{{project.parent.title}}</div>
+      <div class="slide__caption">{{project.parent.title}}<span> {{$index}}</span></div>
     </div>
   </slick>
 
+
+
   <div id="single-project">
-    <div class="row project well" ng-show="shown">
-      <button ng-click="close()" id="close" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      <div ng-show="selectedTest != null" animate-show ng-animate="'fade'">
-        <h3 class="title">{{selectedTest.parent.title}}</h3>
-        <div ng-bind-html="selectedTest.parent.content"></div>
-      </div>
-      <!--<i class="fa fa-desktop">{{selectedTest.parent.url}}</i>-->
-              <button ng-click="prev()">Prev</button>
-              <button ng-click="next()">Next</button>
+    <div class="prev" ng-click="select(index=index-1)"><i class="fa fa-arrow-left fa-5"></i></div>
+    <div class="next" ng-click="select(index=index+1)"><i class="fa fa-arrow-right fa-5"></i></div>
+    <div ng-repeat="project in projects | orderBy: 'parent.date':true" ng-click="select($index)" ng-class="{sel: $index == selected}" class="project-detail">
+      <h3>{{project.parent.title}} {{$index}}</h3>
+      <div ng-bind-html="project.parent.content"></div>
     </div>
   </div>
-
-
-
-</div>
