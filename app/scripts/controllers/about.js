@@ -8,7 +8,10 @@
  * Controller of the portfolioAppApp
  */
 angular.module('portfolioAppApp')
-  .controller('AboutCtrl', function ($scope, $http) {
+  .controller('AboutCtrl', function ($scope, $http, $rootScope) {
         $http.get("http://portfolio-remote.dev/wp-json/pages")
             .success(function(response) {$scope.about = response;});
-  });
+
+        $rootScope.activeNav = 'about';
+
+    });

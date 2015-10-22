@@ -8,13 +8,14 @@
  * Controller of the portfolioAppApp
  */
 angular.module('portfolioAppApp')
-  .controller('MainCtrl', function ($scope, wpjsonFactory, $http) {
+  .controller('MainCtrl', function ($scope, wpjsonFactory, $http, $rootScope) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
         $scope.fromFactory = wpjsonFactory.sayHello("World");
+        $rootScope.activeNav = 'home';
 
         $http.get("http://portfolio-remote.dev/wp-json/pages")
             .success(function(response) {$scope.welcome = response;});
