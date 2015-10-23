@@ -1,13 +1,13 @@
 <h1>Welcome</h1>
 
-<div ng-bind-html="welcome[0].content"></div>
+<div ng-bind-html="welcome.content"></div>
 
 <p>{{fromFactory}}</p>
 
 <h1>Projects</h1>
 
-  <slick dots=true infinite=false speed=300 arrows=true slides-to-show=6 touch-move=false slides-to-scroll=1 init-onload="true" data="projects">
-    <div ng-repeat="project in projects | orderBy:'parent.date':true" ng-click="select($index)" ng-class="{sel: $index == selected}">
+  <slick dots=false infinite=true speed=300 arrows=true slides-to-show=5 touch-move=false slides-to-scroll=1 init-onload="true" data="projects">
+    <div ng-repeat="project in projects | orderBy:'parent.date':true" ng-click="select($index)" ng-class="{sel: $index == selected}" class="carousel-item">
       <img data-lazy="{{project.source}}">
       <div class="slide__caption">{{project.parent.title}}<span> {{$index}}</span></div>
     </div>
@@ -18,7 +18,7 @@
   <div id="single-project">
     <div class="prev" ng-click="select(index=index-1)"><i class="fa fa-arrow-left fa-5"></i></div>
     <div class="next" ng-click="select(index=index+1)"><i class="fa fa-arrow-right fa-5"></i></div>
-    <div ng-repeat="project in projects | orderBy: 'parent.date':true" ng-click="select($index)" ng-class="{sel: $index == selected}" class="project-detail">
+    <div ng-repeat="project in projects | orderBy: 'parent.date':true" ng-click="select($index)" ng-class="{sel: $index == selected}" class="project-detail well">
       <h3>{{project.parent.title}} {{$index}}</h3>
       <div ng-bind-html="project.parent.content"></div>
     </div>

@@ -1,5 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:500);
+@import url(https://fonts.googleapis.com/css?family=Sail);
+@import url(https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900);
 
 body {
   font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -13,4 +15,13 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 h1 {
   font-size: 45px;
+  margin-bottom: 20px;
+}
+
+.navbar-brand {
+  //font-family: 'Sail', cursive;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 24px;
 }

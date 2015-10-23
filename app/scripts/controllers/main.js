@@ -17,7 +17,7 @@ angular.module('portfolioAppApp')
         $scope.fromFactory = wpjsonFactory.sayHello("World");
         $rootScope.activeNav = 'home';
 
-        $http.get("http://portfolio-remote.dev/wp-json/pages")
+        $http.get("http://portfolio-remote.dev/wp-json/pages/welcome")
             .success(function(response) {$scope.welcome = response;});
 
         $http.get("http://portfolio-remote.dev/wp-json/media?parent?type=project")
