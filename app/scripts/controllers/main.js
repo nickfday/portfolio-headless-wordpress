@@ -37,6 +37,12 @@ angular.module('portfolioAppApp')
         $scope.select = function(index) {
             console.log($scope.projects.length);
             $scope.selected = index;
+            if (index > 8) {
+                console.log('high');
+            }
+            if (index < 0) {
+                console.log('low');
+            }
         };
 
   });
