@@ -1,20 +1,25 @@
 .header {
   border-bottom: 0;
+  margin-bottom: 10px;
   .navbar-default {
     background-color: #1e2b33;
     border-color: #e7e7e7;
     border: none;
+    margin-bottom: 0;
     .navbar-nav > li > a {
       color: #ffffff;
       font-size: 16px;
       &:hover {
-        background: #dddddd;
-        color: #1e2b33;
+        text-decoration: underline;
+      }
+      &.active {
+        background: $grey-light;
+        color: #000;
       }
 
     }
     .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
-      background: #ffffff;
+      background: $grey-light;
       color: #1e2b33;
     }
   }
@@ -23,6 +28,29 @@
     margin-right: 20px;
     &:hover {
       color: #dddddd;
+    }
+  }
+}
+
+.social-nav {
+  .social-icon {
+    &:first-child {
+      margin-bottom: 10px;
+    }
+  }
+  @media (min-width: 768px) {
+    float: right;
+    .social-icon:first-child {
+      margin-bottom: 5px;
+    }
+  }
+  @media (min-width: 1200px) {
+    padding-top: 12px;
+    .social-icon {
+      float: left;
+      &:first-child {
+        margin-right: 20px;
+      }
     }
   }
 }

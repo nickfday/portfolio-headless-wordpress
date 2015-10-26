@@ -25,7 +25,7 @@
 
     <!-- Add your site or application content here -->
     <div class="header">
-      <div class="navbar navbar-default" role="navigation">
+      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
           <div class="navbar-header">
 
@@ -36,23 +36,38 @@
               <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="#/">Finley-Day Limited</a>
+            <a class="navbar-brand" href="#/">Finley-Day Web</a>
           </div>
 
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
 
             <ul class="nav navbar-nav">
-              <li class="active" ng-class="{active: activeNav == 'home'}"><a href="#/">Home</a></li>
-              <li ng-class="{active: activeNav == 'about'}"><a ng-href="#/about">About</a></li>
+              <li class=""><a du-smooth-scroll du-scrollspy href="#intro">Home</a></li>
+              <li><a du-smooth-scroll du-scrollspy href="#project">Projects</a></li>
+              <li ng-class="{active: activeNav == 'about'}"><a du-smooth-scroll du-scrollspy href="#about">About</a></li>
               <li ng-class="{active: activeNav == 'contact'}"><a ng-href="#/contact/">Contact</a></li>
             </ul>
+
+            <div class="social-nav">
+              <div class="social-icon">
+                <a href="https://uk.linkedin.com/pub/nicholas-finley-day/25/3b8/454" style="text-decoration:none;"><span style="font: 80% Arial,sans-serif; color:#fff;padding-top:10px"><img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_in_20x15.png" width="20" height="15" alt="View my LinkedIn profile" style="vertical-align:middle;" border="0">&nbsp;View my LinkedIn</span></a>
+              </div>
+              <div class="social-icon" height="30px">
+                <a href="https://twitter.com/nickfday" class="twitter-follow-button" data-show-count="false">Follow @nickfday</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+              </div>
+            </div>
+
           </div>
         </div>
+
       </div>
     </div>
 
-    <div class="container">
-    <div ng-view=""></div>
+    <div class="container-fluid">
+      <div class="row">
+        <div ng-view=""></div>
+      </div>
     </div>
 
     <div class="footer">
@@ -84,8 +99,9 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
-    <script src="bower_components/slick-carousel/slick/slick.js"></script>
+    <script src="bower_components/slick-carousel/slick/slick.min.js"></script>
     <script src="bower_components/angular-slick/dist/slick.js"></script>
+    <script src="bower_components/angular-scroll/angular-scroll.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

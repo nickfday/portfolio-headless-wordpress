@@ -12,6 +12,6 @@ angular.module('portfolioAppApp')
         $http.get("http://portfolio-remote.dev/wp-json/pages/about")
             .success(function(response) {$scope.about = response;});
 
-        $rootScope.activeNav = 'about';
+        //$rootScope.activeNav = 'about';
 
     });

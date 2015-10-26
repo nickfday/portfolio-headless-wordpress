@@ -91,7 +91,9 @@ body {
 }
 
 @import 'common/wp-classes';
+@import 'common/variables';
 @import 'common/grid';
 @import 'common/header';
 @import 'common/font';
+@import 'components/intro';
 @import 'components/carousel';

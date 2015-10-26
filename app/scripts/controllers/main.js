@@ -20,8 +20,13 @@ angular.module('portfolioAppApp')
         $http.get("http://portfolio-remote.dev/wp-json/pages/welcome")
             .success(function(response) {$scope.welcome = response;});
 
-        $http.get("http://portfolio-remote.dev/wp-json/media?parent?type=project")
-        //$http.get("http://portfolio-2015.app/wp-json/media?parent?type=project")
+        $http.get("http://portfolio-remote.dev/wp-json/pages/Key Skills")
+            .success(function(response) {$scope.skills = response;});
+
+        $http.get("http://portfolio-remote.dev/wp-json/pages/Contact Intro")
+            .success(function(response) {$scope.contact = response;});    
+
+        $http.get("http://portfolio-remote.dev/wp-json/media?parent?type=projecta")
             .success(function(response) {$scope.projects = response;});
 
         //close button
@@ -32,17 +37,8 @@ angular.module('portfolioAppApp')
         //default first item selected
         $scope.selected = 0;
 
-
-
-        $scope.select = function(index) {
-            console.log($scope.projects.length);
+        $scope.select = function(index) {           
             $scope.selected = index;
-            if (index > 8) {
-                console.log('high');
-            }
-            if (index < 0) {
-                console.log('low');
-            }
         };
 
   });
