@@ -1,0 +1,30 @@
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+
+section {
+  padding: 50px 0 20px 0;
+}
+
+hr {
+  border-top: 1px dotted #969696;
+}
+
+a {
+  color: #e57254;
+}
+
+ul {
+  padding-left: 17px;
+}
+
+ul.inline {
+  padding-left: 17px;
+  li {
+    float: left;
+    margin-right: 30px;
+  }
+}

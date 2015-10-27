@@ -1,0 +1,117 @@
+.project {
+
+  .slider-nav {
+    .slick-slide {
+      opacity: 0.4;
+    }
+  }
+  .slick-slide {
+    position: relative;
+    margin: 10px;
+
+    .slide__caption {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      z-index: 2;
+      background: $color-grey-dark;
+      color: #fff;
+      //opacity: 0.85;
+      text-align: center;
+    }
+
+    &.slick-center {
+      opacity: 1;
+    }
+
+    .slick-center .slide__caption {
+      background: $color-black;
+    }
+
+    img {
+      //width: 100%;
+      //max-height: 210px;
+    }
+  }
+
+
+  .slick-prev:before, .slick-next:before {
+    color: #000 !important;
+  }
+
+  .slick-initialized .slick-slide {
+    outline: 0;
+  }
+
+  .slick-prev:before, .slick-next:before {
+    font-size: 35px !important;
+  }
+
+  .wp-caption {
+    text-align: center;
+    border: none;
+  }
+
+  .carousel-item p:first-child {
+    border-left: 4px solid #333;
+    color: #222;
+    font-weight: 700;
+    padding-left: 5px;
+  }
+
+  .slick-prev {
+    left: 0;
+  }
+  .slick-next {
+    right: 0;
+  }
+  .slick-center {
+
+  }
+  @media (min-width: $screen-sm-min) {
+    .slick-prev {
+      left: -20px;
+    }
+    .slick-next {
+      right: -20px;
+    }
+  }
+
+}
+
+.prev, .next {
+  position: absolute;
+  font-size: 4em;
+  cursor: pointer;
+  top: 20px;
+  &:hover {
+    color: #ddd;
+  }
+}
+
+.prev {
+  left: -5%;
+}
+
+.next {
+  right: -5%;
+}
+
+.slider-nav {
+  .carousel-item {
+    cursor: pointer;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+section.about {
+  background: $color-grey-dark;
+  color: $color-white;
+  a {
+    color: #e5c454;
+  }
+}
+
