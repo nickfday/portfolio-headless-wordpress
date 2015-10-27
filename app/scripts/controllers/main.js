@@ -47,8 +47,9 @@ angular.module('portfolioAppApp')
                 settings: {
                     slidesToShow: 3
                 }
-            }, {
-                breakpoint: 480,
+            },
+            {
+                breakpoint: 768,
                 settings: {
                     slidesToShow: 1
                 }

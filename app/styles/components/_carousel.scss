@@ -24,14 +24,14 @@
     position: absolute;
     width: 100%;
     z-index: 2;
-    background: #000;
+    background: $color-grey-dark;
     color: #fff;
     opacity: 0.85;
     text-align: center;
   }
 
   .slick-center .slide__caption {
-    background: red;
+    background: $color-black;
   }
 
   .slick-prev:before, .slick-next:before {
