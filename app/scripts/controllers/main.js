@@ -26,7 +26,7 @@ angular.module('portfolioAppApp')
         $http.get("http://portfolio-remote.dev/wp-json/pages/Contact Intro")
             .success(function(response) {$scope.contact = response;});    
 
-        $http.get("http://portfolio-remote.dev/wp-json/media?parent?type=projecta")
+        $http.get("http://portfolio-remote.dev/wp-json/media?parent?type=project")
             .success(function(response) {$scope.projects = response;});
 
         //close button
