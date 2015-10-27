@@ -3,3 +3,10 @@
 /.tmp
 /.sass-cache
 /bower_components
+
+deploy.sh
+app/styles/.DS_Store
+app/.DS_Store
+.idea/
+.idea/workspace.xml
+
