@@ -13,13 +13,13 @@
         text-decoration: underline;
       }
       &.active {
-        background: $grey-light;
+        background: $color-grey-light;
         color: #000;
       }
 
     }
     .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
-      background: $grey-light;
+      background: $color-grey-light;
       color: #1e2b33;
     }
   }

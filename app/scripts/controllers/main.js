@@ -41,4 +41,18 @@ angular.module('portfolioAppApp')
             $scope.selected = index;
         };
 
+        $scope.breakpoints = [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3
+                }
+            }, {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ];
+
   });
