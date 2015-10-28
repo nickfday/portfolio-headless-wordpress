@@ -14,6 +14,10 @@ angular.module('portfolioAppApp')
       'AngularJS',
       'Karma'
     ];
+
+        $http.get("http://portfolio-remote.dev/wp-json/media?parent?type=project")
+        .success(function(response) {$scope.projects = response;});
+
         $scope.fromFactory = wpjsonFactory.sayHello("World");
         $rootScope.activeNav = 'home';
 
@@ -24,21 +28,11 @@ angular.module('portfolioAppApp')
             .success(function(response) {$scope.skills = response;});
 
         $http.get("http://portfolio-remote.dev/wp-json/pages/Contact Intro")
-            .success(function(response) {$scope.contact = response;});    
-
-        $http.get("http://portfolio-remote.dev/wp-json/media?parent?type=project")
-            .success(function(response) {$scope.projects = response;});
+            .success(function(response) {$scope.contact = response;});
 
         //close button
         $scope.close = function() {
             $scope.shown = false;
-        };
-
-        //default first item selected
-        $scope.selected = 0;
-
-        $scope.select = function(index) {           
-            $scope.selected = index;
         };
 
         $scope.breakpoints = [
