@@ -9,7 +9,7 @@
  */
 angular.module('portfolioAppApp')
   .controller('AboutCtrl', function ($scope, $http, $rootScope) {
-        $http.get("http://portfolio-remote.dev/wp-json/pages/about")
+        $http.get("http://finley-day.com/wp-json/pages/about")
             .success(function(response) {$scope.about = response;});
 
         //$rootScope.activeNav = 'about';
