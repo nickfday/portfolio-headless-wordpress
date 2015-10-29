@@ -15,7 +15,7 @@ angular.module('portfolioAppApp')
       'Karma'
     ];
 
-        $http.get("http://portfolio-remote.dev/wp-json/media?parent?type=project")
+        $http.get("http://finley-day.com/wp-json/media?parent?type=project")
         .success(function(response) {$scope.projects = response;});
 
         $scope.fromFactory = wpjsonFactory.sayHello("World");
