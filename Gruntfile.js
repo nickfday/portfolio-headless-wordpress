@@ -418,8 +418,14 @@ module.exports = function (grunt) {
             expand: true,
             dot: true,
             cwd: 'bower_components/slick-carousel/slick',
+            src: ['ajax-loader.gif'],
+            dest: '<%= yeoman.dist %>/styles'
+        }, {
+            expand: true,
+            dot: true,
+            cwd: 'bower_components/slick-carousel/slick',
             src: ['fonts/*.*'],
-            dest: '<%= yeoman.dist %>'
+            dest: '<%= yeoman.dist %>/styles'
             }]
       },
       styles: {
