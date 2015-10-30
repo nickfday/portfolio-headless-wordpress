@@ -53,12 +53,14 @@
     border: none;
   }
 
-  .carousel-item p:first-child {
-    border-left: 4px solid #333;
-    color: #222;
-    font-weight: 700;
-    padding-left: 5px;
-  }
+
+    .carousel-item p:first-child {
+      border-left: 4px solid #333;
+      color: #222;
+      font-weight: 700;
+      padding-left: 5px;
+    }
+
 
   .slick-prev {
     left: 0;
@@ -112,6 +114,17 @@ section.about {
   color: $color-white;
   a {
     color: #e5c454;
+  }
+}
+
+.slick-for .carousel-item {
+  .wp-caption {
+    display: none;
+  }
+  @media (min-width: $screen-sm-min) {
+    .wp-caption {
+      display: block;
+    }
   }
 }
 

@@ -30,7 +30,7 @@
       </div>
     </slick>
 
-      <slick class="slick-for" init-onload="true" infinite=true speed=300 arrows=false slides-to-show=1 touch-move=true slides-to-scroll=1 init-onload="true" data="projects" adaptive-height=true as-nav-for=".slider-nav">
+      <slick class="slick-for" init-onload="true" infinite=true speed=300 arrows=false slides-to-show=1 touch-move=false slides-to-scroll=1 init-onload="true" data="projects" adaptive-height=true as-nav-for=".slider-nav">
         <div ng-repeat="project in projects | orderBy:'parent.date':true" class="carousel-item">
           <h3>{{project.parent.title}}</h3>
           <div ng-bind-html="project.parent.content"></div>
