@@ -118,11 +118,11 @@ section.about {
 }
 
 .slick-for .carousel-item {
-  .wp-caption {
+  .wp-caption, img {
     display: none;
   }
   @media (min-width: $screen-sm-min) {
-    .wp-caption {
+    .wp-caption, img {
       display: block;
     }
   }
