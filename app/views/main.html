@@ -26,7 +26,7 @@
     <slick class="slider-nav" init-onload="true" dots=true infinite=true speed=300 arrows=true slides-to-show=5 touch-move=true slides-to-scroll=1 init-onload="true" data="projects" adaptive-height=true as-nav-for=".slick-for" focus-on-select=true responsive="breakpoints" center-mode="true" center-padding="40px">
       <div ng-repeat="project in projects | orderBy:'parent.date':true" class="carousel-item">
         <!--<img data-lazy="{{project.source}}">-->
-        <img src="{{project.source}}">
+        <img src="{{project.source}}" height="192" width="156">
         <div class="slide__caption">{{project.parent.title}}</div>
       </div>
     </slick>

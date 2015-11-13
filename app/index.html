@@ -45,7 +45,7 @@
             <ul class="nav navbar-nav">
               <li class=""><a du-smooth-scroll du-scrollspy href="#intro">Home</a></li>
               <li><a du-smooth-scroll du-scrollspy href="#project">Projects</a></li>
-              <li ng-class="{active: activeNav == 'about'}"><a du-smooth-scroll du-scrollspy href="#about">About</a></li>
+              <li><a du-smooth-scroll du-scrollspy href="#about">About</a></li>
               <!--<li ng-class="{active: activeNav == 'contact'}"><a ng-href="#/contact/">Contact</a></li>-->
             </ul>
 
@@ -68,7 +68,7 @@
     <div class="container-fluid">
       <us-spinner></us-spinner>
       <div class="row">
-        <div ng-view=""></div>
+        <div class="fadeIn" ng-view=""></div>
       </div>
     </div>
 
