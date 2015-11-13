@@ -34,6 +34,9 @@ module.exports = function(config) {
       'bower_components/slick-carousel/slick/slick.min.js',
       'bower_components/angular-slick/dist/slick.js',
       'bower_components/angular-scroll/angular-scroll.js',
+      'bower_components/spin.js/spin.js',
+      'bower_components/angular-spinner/angular-spinner.js',
+      'bower_components/angular-loading-spinner/angular-loading-spinner.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",

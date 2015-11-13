@@ -17,7 +17,9 @@ angular
     'ngSanitize',
     'ngTouch',
     'slick',
-    'duScroll'
+    'duScroll',
+    'angularSpinner',
+    'ngLoadingSpinner'
   ])
   .config(function ($routeProvider) {
     $routeProvider
