@@ -15,19 +15,19 @@ angular.module('portfolioAppApp')
       'AngularJS',
       'Karma'
     ];
-        $http.get("http://finley-day.com/wp-json/media?parent?type=project")
+        $http.get("http://api.finley-day.com/wp-json/media?parent?type=project")
         .success(function(response) {$scope.projects = response;});
 
         $scope.fromFactory = wpjsonFactory.sayHello("World");
         $rootScope.activeNav = 'home';
 
-        $http.get("http://finley-day.com/wp-json/pages/welcome")
+        $http.get("http://api.finley-day.com/wp-json/pages/welcome")
             .success(function(response) {$scope.welcome = response;});
 
-        $http.get("http://finley-day.com/wp-json/pages/Key Skills")
+        $http.get("http://api.finley-day.com/wp-json/pages/Key Skills")
             .success(function(response) {$scope.skills = response;});
 
-        $http.get("http://finley-day.com/wp-json/pages/Contact Intro")
+        $http.get("http://api.finley-day.com/wp-json/pages/Contact Intro")
             .success(function(response) {$scope.contact = response;});
 
         //close button

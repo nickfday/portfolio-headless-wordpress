@@ -10,7 +10,7 @@
 angular.module('portfolioAppApp')
   .controller('ContactCtrl', function ($scope, $rootScope, $http) {
         $rootScope.activeNav = 'contact';
-        $http.get("http://portfolio-remote.dev/wp-json/pages/contact")
+        $http.get("http://api.finley-day.com/wp-json/pages/contact")
             .success(function(response) {$scope.contact = response;});
 
     });
